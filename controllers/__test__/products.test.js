@@ -78,7 +78,7 @@ test('Retrieves all products (limit by default is to return 5 products)', async 
 
   expect(response.body.success).toBeTruthy();
   expect(response.body.data.items.length).toBe(5);
-});
+}, 5000);
 
 test('Retrieves all products limiting number of products returned', async () => {
   await request(app)
