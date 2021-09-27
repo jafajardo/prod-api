@@ -80,7 +80,7 @@ test('Retrieves all products (limit by default is to return 5 products)', async 
   expect(response.body.data.items.length).toBe(5);
 
   done();
-}, 5000);
+}, 10000);
 
 test('Retrieves all products limiting number of products returned', async () => {
   await request(app)
