@@ -7,7 +7,7 @@
     "start": "node index.js",
     "start:dev": "NODE_ENV=development nodemon index.js",
     "test": "jest --watch-all --no-cache",
-    "test:ci": "jest"
+    "test:ci": "CI=true&&jest"
   },
   "jest": {
     "testEnvironment": "node",
