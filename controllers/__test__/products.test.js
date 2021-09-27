@@ -33,7 +33,7 @@ const headers = {
   k: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ3ZTE0OTlkLTNmNWYtNGMxNC04ZjY1LTBjZjBkNTJhMWYzYSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZW1haWwuY29tIn0.SJUucdpb_06OTJdxSstmBrACFOubju7mXcaJyGZmVtM',
 };
 
-test('Retrieves all products (limit by default is to return 5 products)', async () => {
+test('Retrieves all products (limit by default is to return 5 products)', async (done) => {
   await request(app)
     .post('/products')
     .set(headers)
@@ -78,6 +78,8 @@ test('Retrieves all products (limit by default is to return 5 products)', async 
 
   expect(response.body.success).toBeTruthy();
   expect(response.body.data.items.length).toBe(5);
+
+  done();
 }, 5000);
 
 test('Retrieves all products limiting number of products returned', async () => {
