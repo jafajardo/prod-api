@@ -5,7 +5,7 @@ let mongo;
 beforeAll(async () => {
   process.env.JWT_KEY = '7H1S_I5_m7_sUp3r_S3CR3t_k3Y';
 
-  mongo = await MongoMemoryServer.create();
+  mongo = await MongoMemoryServer.create({ binary: { version: '4.2.6' } });
   const mongoUri = mongo.getUri();
   await mongoose.connect(mongoUri);
 });
