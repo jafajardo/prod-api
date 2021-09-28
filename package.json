@@ -13,7 +13,8 @@
     "testEnvironment": "node",
     "setupFilesAfterEnv": [
       "./test/setup.js"
-    ]
+    ],
+    "verbose": true
   },
   "keywords": [],
   "author": "",
@@ -27,8 +28,8 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "jest": "^27.2.2",
-    "mongodb-memory-server": "^7.4.1",
+    "jest": "^27.1.0",
+    "mongodb-memory-server": "^7.4.0",
     "nodemon": "^2.0.12",
     "supertest": "^6.1.6"
   }
