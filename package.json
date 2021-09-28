@@ -9,6 +9,11 @@
     "test": "jest --watch-all --no-cache",
     "test:ci": "CI=true&&jest"
   },
+  "config": {
+    "mongodbMemoryServer": {
+      "debug": "1"
+    }
+  },
   "jest": {
     "testEnvironment": "node",
     "setupFilesAfterEnv": [
